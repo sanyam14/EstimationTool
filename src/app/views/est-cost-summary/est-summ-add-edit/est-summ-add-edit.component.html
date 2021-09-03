@@ -1,0 +1,1612 @@
+
+
+<div class="layout-mode" fxFlex fxLayout="column">
+    <div class="page-header">
+        <h4>ESTIMATE SPREADSHEET</h4>
+    </div>
+    <div class="card" fxFlex>
+        <div class="card-body pb-2" fxFlex fxLayout="column">
+            <form class="form-horizontal" fxFlex="0 1 100%" fxLayout="column">
+                <div class="main-portion">
+                    <h4> </h4>
+                    <div class="row h-100">
+                        <div class="col-md-12 d-flex p-0" id="left-table-section">
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header"><strong>Customer Details</strong></div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>NXP Chandler Site</span></div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center"><input class="form-control form-control-sm"
+                                                            [(ngModel)]="nXP_Chandler_Site" name="nXP_Chandler_Site"
+                                                            type="text"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Project Details</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="save_product_code" name="save_product_code"
+                                                            class="form-control form-control-sm">
+                                                        <div class="input-group-append">
+                                                            <span class="btn btn-sm btn-primary cursor-pointer btn-icon"
+                                                                id="basic-addon2" (click)="getProductFetch()">
+                                                                <svg viewBox="0 -96 512 512" class="icon m-0">
+                                                                    <use xlink:href="#menu"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 d-flex p-0" id="left-table-section">
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-header"><strong>Shipping Details</strong></div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Shipping</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="shipping" name="shipping" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Warehouse Manager</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="warehouse_Manager" name="warehouse_Manager"
+                                                            class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Shipping Address 1</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="shipping_Address_1" name="shipping_Address_1"
+                                                            class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Shipping Address 2</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="shipping_Address_2" name="shipping_Address_2"
+                                                            class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>City</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="city" name="city" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>State</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="state" name="state" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Zip</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="zip" name="zip" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Phone 1</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="Phone_1" name="Phone_1" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Phone 2</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="phone_2" name="phone_2" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Email</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="shipping_email" name="shipping_email"
+                                                            class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-header"><strong>Project Details</strong></div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Part Number</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="part_Number" name="part_Number"
+                                                            class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Project Code</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="product_code" name="product_code"
+                                                            class="form-control form-control-sm">
+                                                        <div class="input-group-append">
+                                                            <span class="btn btn-sm btn-primary cursor-pointer btn-icon"
+                                                                id="basic-addon2" (click)="fetchProducts()">
+                                                                <svg viewBox="0 -96 512 512" class="icon m-0">
+                                                                    <use xlink:href="#menu"></use>
+                                                                </svg>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Project Description</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="Project_Description" name="Project_Description"
+                                                            class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Quantity</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="quantity" name="quantity"
+                                                            (change)="onChangeQuantity()" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Sales Representative</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="sales_Representative" name="sales_Representative"
+                                                            class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Phone Number</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="Phone_Number" name="Phone_Number"
+                                                            class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Email</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="project_email" name="project_email"
+                                                            class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Estimator</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="estimator" name="estimator"
+                                                            class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Estimate Number</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="estimate_Number" name="estimate_Number"
+                                                            class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-header"><strong>Shipping Details</strong></div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Shipping</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="product_name" name="" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Warehouse Manager</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="product_name" name="" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Shipping Address 1</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="product_name" name="" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Shipping Address 2</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="product_name" name="" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>City, State Zip</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="product_name" name="" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Phone 1</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="product_name" name="" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Phone 2</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="product_name" name="" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center">
+                                                            <span>Email</span>
+                                                        </div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <input type="text" [(ngModel)]="product_name" name="" class="form-control form-control-sm">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+
+                        <div class="col-md-12 d-flex p-0" id="left-table-section">
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header"><strong>Critical Dates</strong></div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>Estimate Due Date</span></div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <!-- <input class="form-control form-control-sm"
+                                                            type="text" value= "estimate_Due_Date" [(ngModel)]="estimate_Due_Date" name="estimate_Due_Date"> -->
+                                                            <kendo-datepicker #dt13 value="" [min]="min" id="delivery_until"
+                                                            class="w-100 mb-calendra" name="estimate_Due_Date"
+                                                            [(ngModel)]="estimate_Due_Date" [format]="'MM/dd/yyyy'"></kendo-datepicker>
+                                                        </div>
+                                                           
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>Project Due Date</span></div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <!-- <input class="form-control form-control-sm"
+                                                            type="date" value = {{project_Due_Date}} [(ngModel)]="project_Due_Date" name="project_Due_Date"> -->
+                                                            <kendo-datepicker #dt13 value="" [min]="min" id="delivery_until"
+                                                            class="w-100 mb-calendra" name="project_Due_Date"
+                                                            [(ngModel)]="project_Due_Date" [format]="'MM/dd/yyyy'"></kendo-datepicker>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>Submittal
+                                                                Required?</span></div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <!-- <input class="form-control form-control-sm"
+                                                            type="date" [(ngModel)]="submittal_Required" name="submittal_Required"> -->
+                                                            <kendo-datepicker #dt13 value="" [min]="min" id="delivery_until"
+                                                            class="w-100 mb-calendra" name="submittal_Required"
+                                                            [(ngModel)]="submittal_Required" [format]="'MM/dd/yyyy'"></kendo-datepicker>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>Submittal Due Date</span></div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <!-- <input class="form-control form-control-sm"
+                                                            type="date" [(ngModel)]="submittal_Due_Date" name="submittal_Due_Date"> -->
+                                                            <kendo-datepicker #dt13 value="" [min]="min" id="delivery_until"
+                                                            class="w-100 mb-calendra" name="submittal_Due_Date"
+                                                            [(ngModel)]="submittal_Due_Date" [format]="'MM/dd/yyyy'"></kendo-datepicker>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>Ready to Ship Date</span></div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center">
+                                                        <!-- <input class="form-control form-control-sm"
+                                                            type="date" [(ngModel)]="ready_to_Ship_Date" name="ready_to_Ship_Date"> -->
+                                                            <kendo-datepicker #dt13 value="" [min]="min" id="delivery_until"
+                                                            class="w-100 mb-calendra" name="ready_to_Ship_Date"
+                                                            [(ngModel)]="ready_to_Ship_Date" [format]="'MM/dd/yyyy'"></kendo-datepicker>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 d-flex p-0" id="left-table-section">
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header"><strong>Critical Dates - Service Calls</strong></div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>On Site Date</span></div>
+                                                    </label>
+                                                    <div class="col-sm-8 d-inline-flex align-items-center">
+                                                        <!-- <input class="form-control form-control-sm"
+                                                            type="date" [(ngModel)]="on_site_date" name="on_site_date"> -->
+                                                            <kendo-datepicker #dt13 value="" [min]="min" id="delivery_until"
+                                                            class="w-100 mb-calendra" name="on_site_date" 
+                                                            [(ngModel)]="on_site_date" [format]="'MM/dd/yyyy'"></kendo-datepicker>
+                                                        </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>Anticipated Length
+                                                                of Project</span></div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center"><input class="form-control form-control-sm"
+                                                            type="text" [(ngModel)]="alp" name="alp"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mt-4">
+
+                            <!-- <div class="tab"> -->
+                            <!-- <button class="tablinks" (click)="openGridTab($event, 'Material')">Material</button> -->
+                            <!-- <button class="tablinks" (click)="openGridTab($event, 'Labour')">Labour</button> -->
+                            <!-- </div> -->
+
+                            <!-- Add Row Grid -->
+                            <!-- 
+                            <div id="Material" class="tabcontent active  h-100"> -->
+
+                            <div class="d-flex" [ngStyle]="{'height':'100%', 'flex':'0 1 100%'}">
+
+                                <kendo-grid [kendoGridBinding]="gridData" [reorderable]="true" [resizable]="true"
+                                    [sortable]="false" [groupable]="false" [filterable]="false" [selectable]="selectableSettings"
+                                    [kendoGridSelectBy]="'rowIndex'" [ngStyle]="{'min-height':'100px', 'max-width':'100%','max-height': '300px'}"
+                                    [selectedKeys]="row_selection" (selectionChange)="getSelectedRowDetail($event)">
+
+                                    <!-- <ng-template kendoGridToolbarTemplate>
+
+                                            <div class="d-flex align-items-center">
+
+                                                <button [ngStyle]="{'padding':'3px 5px','min-height':'22px'}" type="button"
+                                                    title="Add Row" (click)="addRow()" #button class="btn btn-sm btn-primary with-icon mr-2"><svg
+                                                        viewBox="0 0 81500 81500" class="icon">
+
+                                                        <use xlink:href="#add"></use>
+
+                                                    </svg> Add Rows
+
+                                                </button>
+
+                                            </div>
+
+                                        </ng-template> -->
+
+
+
+
+                                    <kendo-grid-column field="OPTM_MATERIAL" title="Material" filter="text" [width]="150"
+                                        [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" disabled="true" class="form-control form-control-sm" id=""
+                                                value={{dataItem.OPTM_MATERIAL}} (change)="onChange(dataItem.rowIndex,OPTM_MATERIAL.value,OPTM_MATERIAL.title)"
+                                                #OPTM_MATERIAL title="OPTM_MATERIAL" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column>
+
+                                    <kendo-grid-column field="OPTM_THICKNESS" title="Thickness" filter="text" [width]="150"
+                                        [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" class="form-control form-control-sm text-right" id=""
+                                                value={{dataItem.OPTM_THICKNESS}} (change)="onChange(dataItem.rowIndex,OPTM_THICKNESS.value,OPTM_THICKNESS.title)"
+                                                #OPTM_THICKNESS title="OPTM_THICKNESS" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column>
+
+
+
+
+
+                                    <kendo-grid-column field="OPTM_DESCRIPTION" title="Description" filter="text"
+                                        [width]="150" [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_DESCRIPTION}}
+                                                (change)="onChange(dataItem.rowIndex,OPTM_DESCRIPTION.value,OPTM_DESCRIPTION.title)"
+                                                #OPTM_DESCRIPTION title="OPTM_DESCRIPTION" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column>
+
+                                    <!-- <kendo-grid-column field="OPTM_QUANTITY" title="Quantity" filter="text" [width]="150"
+                                        [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_QUANTITY}}
+                                                (change)="onChange(dataItem.rowIndex,OPTM_QUANTITY.value,OPTM_QUANTITY.title)"
+                                                #OPTM_QUANTITY title="OPTM_QUANTITY" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column> -->
+
+                                    <kendo-grid-column field="" title="Length" filter="text" [width]="150"
+                                        [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" class="form-control form-control-sm text-right" id=""
+                                                value={{dataItem.OPTM_LENGTH}} (change)="onChange(dataItem.rowIndex,OPTM_LENGTH.value,OPTM_LENGTH.title)"
+                                                #Length title="OPTM_LENGTH" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column>
+
+                                    <kendo-grid-column field="" title="Width" filter="text" [width]="150"
+                                        [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" class="form-control form-control-sm text-right" id=""
+                                                value={{dataItem.OPTM_WIDTH}} (change)="onChange(dataItem.rowIndex,OPTM_WIDTH.value,OPTM_WIDTH.title)"
+                                                #OPTM_WIDTH title="OPTM_WIDTH" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column>
+
+                                    <kendo-grid-column field="OPTM_MANUFACTURER" title="Manufacturer" filter="text"
+                                        [width]="150" [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_MANUFACTURER}}
+                                                (change)="onChange(dataItem.rowIndex,OPTM_MANUFACTURER.value,OPTM_MANUFACTURER.title)"
+                                                #OPTM_MANUFACTURER title="OPTM_MANUFACTURER" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column>
+
+                                    <kendo-grid-column field="OPTM_PART_NUMBER" title="Part Number" filter="text"
+                                        [width]="150" [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" class="form-control form-control-sm text-right" id=""
+                                                value={{dataItem.OPTM_PART_NUMBER}} (change)="onChange(dataItem.rowIndex,OPTM_PART_NUMBER.value,OPTM_PART_NUMBER.title)"
+                                                #OPTM_PART_NUMBER title="OPTM_PART_NUMBER" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column>
+
+                                    <kendo-grid-column field="OPTM_VENDOR" title="Vender" filter="text" [width]="150"
+                                        [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_VENDOR}}
+                                                (change)="onChange(dataItem.rowIndex,OPTM_VENDOR.value,OPTM_VENDOR.title)"
+                                                #OPTM_VENDOR title="OPTM_VENDOR" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column>
+
+                                    <kendo-grid-column field="OPTM_LEAD_TIME" title="Lead Time" filter="text" [width]="150"
+                                        [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_LEAD_TIME}}
+                                                (change)="onChange(dataItem.rowIndex,OPTM_LEAD_TIME.value,OPTM_LEAD_TIME.title)"
+                                                #OPTM_LEAD_TIME title="OPTM_LEAD_TIME" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column>
+
+                                    <kendo-grid-column field="OPTM_PER_UNIT_PRICE" title="Per Unit Price" filter="text"
+                                        [width]="150" [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" class="form-control form-control-sm text-right" id=""
+                                                value={{dataItem.OPTM_PER_UNIT_PRICE}} (change)="onChange(dataItem.rowIndex,OPTM_PER_UNIT_PRICE.value,OPTM_PER_UNIT_PRICE.title)"
+                                                #OPTM_PER_UNIT_PRICE title="OPTM_PER_UNIT_PRICE" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column>
+                                    <kendo-grid-column field="OPTM_QUANTITY" title="Quantity" filter="text" [width]="150"
+                                        [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" class="form-control form-control-sm text-right" id=""
+                                                value={{dataItem.OPTM_QUANTITY}} (change)="onChange(dataItem.rowIndex,OPTM_QUANTITY.value,OPTM_QUANTITY.title)"
+                                                #OPTM_QUANTITY title="OPTM_QUANTITY" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column>
+
+                                    <kendo-grid-column field="OPTM_PROJECTED_COST" title="Projected Cost" filter="text"
+                                        [width]="150" [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" disabled="true" class="form-control form-control-sm text-right"
+                                                id="" value={{dataItem.OPTM_PROJECTED_COST}} (change)="onChange(dataItem.rowIndex,OPTM_PROJECTED_COST.value,OPTM_PROJECTED_COST.title)"
+                                                #OPTM_PROJECTED_COST title="OPTM_PROJECTED_COST" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column>
+
+                                    <kendo-grid-column field="OPTM_MARKUP" title="MarkUp" filter="text" [width]="150"
+                                        [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" class="form-control form-control-sm text-right" id=""
+                                                value={{dataItem.OPTM_MARKUP}} (change)="onChange(dataItem.rowIndex,OPTM_MARKUP.value,OPTM_MARKUP.title)"
+                                                #OPTM_MARKUP title="OPTM_MARKUP" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column>
+
+                                    <kendo-grid-column field="OPTM_AMOUNT" title="Amount" filter="text" [width]="150"
+                                        [minResizableWidth]="150">
+
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+
+                                            <input type="text" disabled="true" class="form-control form-control-sm text-right"
+                                                id="" value={{dataItem.OPTM_AMOUNT}} (change)="onChange(dataItem.rowIndex,OPTM_AMOUNT.value,OPTM_AMOUNT.title)"
+                                                #OPTM_AMOUNT title="OPTM_AMOUNT" />
+
+                                        </ng-template>
+
+                                    </kendo-grid-column>
+
+
+
+
+
+                                </kendo-grid>
+
+                            </div>
+
+                            <!-- </div> -->
+
+
+
+                        </div><br>
+                        <div class="col-md-12 mt-5">
+                            <div class="tab">
+                                <button class="tablinks" (click)="openGridTab($event, 'Labor')">Labor</button>
+                                <!-- <button class="tablinks" (click)="openGridTab($event, 'Labour')">Labour</button> -->
+                            </div>
+
+                            <div id="Labor" class="tabcontent active h-100">
+
+                                <div class="d-flex" [ngStyle]="{'height':'100%', 'flex':'0 1 100%'}">
+
+                                    <kendo-grid [kendoGridBinding]="laborGrid" [reorderable]="true" [resizable]="true"
+                                        [sortable]="false" [groupable]="false" [filterable]="false" [selectable]="selectableSettings"
+                                        [kendoGridSelectBy]="'rowIndex'" [ngStyle]="{'min-height':'100px', 'max-width':'100%'}"
+                                        [selectedKeys]="row_selection" (selectionChange)="getSelectedRowDetail($event)">
+
+                                        <kendo-grid-column field="" title="Labor" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_LABOR}}
+                                                    (change)="onLaborChange(dataItem.rowIndex,OPTM_LABOR.value,OPTM_LABOR.title)"
+                                                    #OPTM_LABOR title="OPTM_LABOR" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_DESCRIPTION" title="Description" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_DESCRIPTION}}
+                                                    (change)="onLaborChange(dataItem.rowIndex,OPTM_DESCRIPTION.value,OPTM_DESCRIPTION.title)"
+                                                    #OPTM_DESCRIPTION title="OPTM_DESCRIPTION" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_QUANTITY" title="Quantity" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_QUANTITY}} (change)="onLaborChange(dataItem.rowIndex,OPTM_QUANTITY.value,OPTM_QUANTITY.title)"
+                                                    #OPTM_QUANTITY title="OPTM_QUANTITY" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_PER_UNIT_PRICE" title="Per Unit Price" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_PER_UNIT_PRICE}} (change)="onLaborChange(dataItem.rowIndex,OPTM_PER_UNIT_PRICE.value,OPTM_PER_UNIT_PRICE.title)"
+                                                    #OPTM_PER_UNIT_PRICE title="OPTM_PER_UNIT_PRICE" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_PROJECTED_COST" title="Projected Cost" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" disabled="true" class="form-control form-control-sm text-right"
+                                                    id="" value={{dataItem.OPTM_PROJECTED_COST}} (change)="onLaborChange(dataItem.rowIndex,OPTM_PROJECTED_COST.value,OPTM_PROJECTED_COST.title)"
+                                                    #OPTM_PROJECTED_COST title="OPTM_PROJECTED_COST" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_MARKUP" title="MarkUp" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_MARKUP}} (change)="onLaborChange(dataItem.rowIndex,OPTM_MARKUP.value,OPTM_MARKUP.title)"
+                                                    #OPTM_MARKUP title="OPTM_MARKUP" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_AMOUNT" title="Amount" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" disabled="true" class="form-control form-control-sm text-right"
+                                                    id="" value={{dataItem.OPTM_AMOUNT}} (change)="onLaborChange(dataItem.rowIndex,OPTM_AMOUNT.value,OPTM_AMOUNT.title)"
+                                                    #OPTM_AMOUNT title="OPTM_AMOUNT" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+
+
+                                    </kendo-grid>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="tab">
+                                <button class="tablinks" (click)="openGridTab($event, 'osl')">On Site Labor</button>
+                                <!-- <button class="tablinks" (click)="openGridTab($event, 'Labour')">Labour</button> -->
+                            </div>
+                            <div id="osl" class="tabcontent h-100">
+
+                                <div class="d-flex" [ngStyle]="{'height':'50%', 'flex':'0 1 100%'}">
+
+                                    <kendo-grid [kendoGridBinding]="onSiteGrid" [reorderable]="true" [resizable]="true"
+                                        [sortable]="false" [groupable]="false" [filterable]="false" [selectable]="selectableSettings"
+                                        [kendoGridSelectBy]="'rowIndex'" [ngStyle]="{'min-height':'200px', 'max-width':'100%'}"
+                                        [selectedKeys]="row_selection" (selectionChange)="getSelectedRowDetail($event)">
+
+                                        <ng-template kendoGridToolbarTemplate>
+
+                                            <div class="d-flex align-items-center">
+
+                                                <button [ngStyle]="{'padding':'3px 5px','min-height':'22px'}" type="button"
+                                                    title="Add Row" (click)="addSiteLaborRow()" #button class="btn btn-sm btn-primary with-icon mr-2"><svg
+                                                        viewBox="0 0 81500 81500" class="icon">
+
+                                                        <use xlink:href="#add"></use>
+
+                                                    </svg> Add Rows
+
+                                                </button>
+
+                                            </div>
+
+                                        </ng-template>
+
+                                        <kendo-grid-column field="" title="On Site Labor" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_LABOR}}
+                                                    (change)="onSiteLbrChange(dataItem.rowIndex,OPTM_LABOR.value,OPTM_LABOR.title)"
+                                                    #OPTM_LABOR title="OPTM_LABOR" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_DESCRIPTION" title="Description" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_DESCRIPTION}}
+                                                    (change)="onSiteLbrChange(dataItem.rowIndex,OPTM_DESCRIPTION.value,OPTM_DESCRIPTION.title)"
+                                                    #OPTM_DESCRIPTION title="OPTM_DESCRIPTION" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_QUANTITY" title="Quantity" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_QUANTITY}} (change)="onSiteLbrChange(dataItem.rowIndex,OPTM_QUANTITY.value,OPTM_QUANTITY.title)"
+                                                    #OPTM_QUANTITY title="OPTM_QUANTITY" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_PER_UNIT_PRICE" title="Per Unit Price" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_PER_UNIT_PRICE}} (change)="onSiteLbrChange(dataItem.rowIndex,OPTM_PER_UNIT_PRICE.value,OPTM_PER_UNIT_PRICE.title)"
+                                                    #OPTM_PER_UNIT_PRICE title="OPTM_PER_UNIT_PRICE" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_PROJECTED_COST" title="Projected Cost" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_PROJECTED_COST}} (change)="onSiteLbrChange(dataItem.rowIndex,OPTM_PROJECTED_COST.value,OPTM_PROJECTED_COST.title)"
+                                                    #OPTM_PROJECTED_COST title="OPTM_PROJECTED_COST" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_MARKUP" title="MarkUp" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_MARKUP}} (change)="onSiteLbrChange(dataItem.rowIndex,OPTM_MARKUP.value,OPTM_MARKUP.title)"
+                                                    #OPTM_MARKUP title="OPTM_MARKUP" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_AMOUNT" title="Amount" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" disabled="true" class="form-control form-control-sm text-right"
+                                                    id="" value={{dataItem.OPTM_AMOUNT}} (change)="onSiteLbrChange(dataItem.rowIndex,OPTM_AMOUNT.value,OPTM_AMOUNT.title)"
+                                                    #OPTM_AMOUNT title="OPTM_AMOUNT" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                               <kendo-grid-column field="delete" title="" template="" [width]="60"
+                                            [minResizableWidth]="60">
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+                                                <button type="button" class="btn btn-danger btn-sm btn-icon" (click)="onDeleteSiteRow(dataItem.rowIndex)">
+                                                    <svg viewBox="0 0 753.23 753.23" class="icon">
+                                                        <use xlink:href="#bin"></use>
+                                                    </svg>
+                                                </button>
+                                            </ng-template>
+                                        </kendo-grid-column>
+
+                                    </kendo-grid>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="tab">
+                                <button class="tablinks" (click)="openGridTab($event, 'Travel')">Travel</button>
+                                <!-- <button class="tablinks" (click)="openGridTab($event, 'Labour')">Labour</button> -->
+                            </div>
+
+                            <div id="Travel" class="tabcontent active h-100">
+
+                                <div class="d-flex" [ngStyle]="{'height':'50%', 'flex':'0 1 100%'}">
+
+                                    <kendo-grid [kendoGridBinding]="travelGrid" [reorderable]="true" [resizable]="true"
+                                        [sortable]="false" [groupable]="false" [filterable]="false" [selectable]="selectableSettings"
+                                        [kendoGridSelectBy]="'rowIndex'" [ngStyle]="{'min-height':'200px', 'max-width':'100%'}"
+                                        [selectedKeys]="row_selection" (selectionChange)="getSelectedRowDetail($event)">
+
+                                        <ng-template kendoGridToolbarTemplate>
+
+                                            <div class="d-flex align-items-center">
+
+                                                <button [ngStyle]="{'padding':'3px 5px','min-height':'22px'}" type="button"
+                                                    title="Add Row" (click)="addTravelRow()" #button class="btn btn-sm btn-primary with-icon mr-2"><svg
+                                                        viewBox="0 0 81500 81500" class="icon">
+
+                                                        <use xlink:href="#add"></use>
+
+                                                    </svg> Add Rows
+
+                                                </button>
+
+                                            </div>
+
+                                        </ng-template>
+
+                                        <kendo-grid-column field="" title="Travel" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_LABOR}}
+                                                    (change)="ontravelChange(dataItem.rowIndex,OPTM_LABOR.value,OPTM_LABOR.title)"
+                                                    #OPTM_LABOR title="OPTM_LABOR" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_DESCRIPTION" title="Description" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_DESCRIPTION}}
+                                                    (change)="ontravelChange(dataItem.rowIndex,OPTM_DESCRIPTION.value,OPTM_DESCRIPTION.title)"
+                                                    #OPTM_DESCRIPTION title="OPTM_DESCRIPTION" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_QUANTITY" title="Quantity" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_QUANTITY}} (change)="ontravelChange(dataItem.rowIndex,OPTM_QUANTITY.value,OPTM_QUANTITY.title)"
+                                                    #OPTM_QUANTITY title="OPTM_QUANTITY" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_PER_UNIT_PRICE" title="Per Unit Price" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_PER_UNIT_PRICE}} (change)="ontravelChange(dataItem.rowIndex,OPTM_PER_UNIT_PRICE.value,OPTM_PER_UNIT_PRICE.title)"
+                                                    #OPTM_PER_UNIT_PRICE title="OPTM_PER_UNIT_PRICE" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_PROJECTED_COST" title="Projected Cost" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_PROJECTED_COST}} (change)="ontravelChange(dataItem.rowIndex,OPTM_PROJECTED_COST.value,OPTM_PROJECTED_COST.title)"
+                                                    #OPTM_PROJECTED_COST title="OPTM_PROJECTED_COST" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_MARKUP" title="MarkUp" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_MARKUP}} (change)="ontravelChange(dataItem.rowIndex,OPTM_MARKUP.value,OPTM_MARKUP.title)"
+                                                    #OPTM_MARKUP title="OPTM_MARKUP" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_AMOUNT" title="Amount" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" disabled="true" class="form-control form-control-sm text-right"
+                                                    id="" value={{dataItem.OPTM_AMOUNT}} (change)="ontravelChange(dataItem.rowIndex,OPTM_AMOUNT.value,OPTM_AMOUNT.title)"
+                                                    #OPTM_AMOUNT title="OPTM_AMOUNT" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+                                        <kendo-grid-column field="delete" title="" template="" [width]="60"
+                                        [minResizableWidth]="60">
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+                                            <button type="button" class="btn btn-danger btn-sm btn-icon" (click)="onDeleteTravelRow(dataItem.rowIndex)">
+                                                <svg viewBox="0 0 753.23 753.23" class="icon">
+                                                    <use xlink:href="#bin"></use>
+                                                </svg>
+                                            </button>
+                                        </ng-template>
+                                    </kendo-grid-column>
+
+
+
+                                    </kendo-grid>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="tab">
+                                <button class="tablinks" (click)="openGridTab($event, 'sct')">Subcontracting</button>
+                                <!-- <button class="tablinks" (click)="openGridTab($event, 'Labour')">Labour</button> -->
+                            </div>
+
+                            <div id="sct" class="tabcontent active h-100">
+
+                                <div class="d-flex" [ngStyle]="{'height':'50%', 'flex':'0 1 100%'}">
+
+                                    <kendo-grid [kendoGridBinding]="subContractingGrid" [reorderable]="true"
+                                        [resizable]="true" [sortable]="false" [groupable]="false" [filterable]="false"
+                                        [selectable]="selectableSettings" [kendoGridSelectBy]="'rowIndex'" [ngStyle]="{'min-height':'200px', 'max-width':'100%'}"
+                                        [selectedKeys]="row_selection" (selectionChange)="getSelectedRowDetail($event)">
+                                        <ng-template kendoGridToolbarTemplate>
+
+                                            <div class="d-flex align-items-center">
+
+                                                <button [ngStyle]="{'padding':'3px 5px','min-height':'22px'}" type="button"
+                                                    title="Add Row" (click)="addsubcontracting()" #button class="btn btn-sm btn-primary with-icon mr-2"><svg
+                                                        viewBox="0 0 81500 81500" class="icon">
+
+                                                        <use xlink:href="#add"></use>
+
+                                                    </svg> Add Rows
+
+                                                </button>
+
+                                            </div>
+
+                                        </ng-template>
+                                        <kendo-grid-column field="" title="Subcontracting" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_LABOR}}
+                                                    (change)="onSubContractChange(dataItem.rowIndex,OPTM_LABOR.value,OPTM_LABOR.title)"
+                                                    #OPTM_LABOR title="OPTM_LABOR" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_DESCRIPTION" title="Description" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_DESCRIPTION}}
+                                                    (change)="onSubContractChange(dataItem.rowIndex,OPTM_DESCRIPTION.value,OPTM_DESCRIPTION.title)"
+                                                    #OPTM_DESCRIPTION title="OPTM_DESCRIPTION" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_QUANTITY" title="Quantity" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_QUANTITY}} (change)="onSubContractChange(dataItem.rowIndex,OPTM_QUANTITY.value,OPTM_QUANTITY.title)"
+                                                    #OPTM_QUANTITY title="OPTM_QUANTITY" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_PER_UNIT_PRICE" title="Per Unit Price" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_PER_UNIT_PRICE}} (change)="onSubContractChange(dataItem.rowIndex,OPTM_PER_UNIT_PRICE.value,OPTM_PER_UNIT_PRICE.title)"
+                                                    #OPTM_PER_UNIT_PRICE title="OPTM_PER_UNIT_PRICE" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_PROJECTED_COST" title="Projected Cost" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" disabled="true" class="form-control form-control-sm text-right"
+                                                    id="" value={{dataItem.OPTM_PROJECTED_COST}} (change)="onSubContractChange(dataItem.rowIndex,OPTM_PROJECTED_COST.value,OPTM_PROJECTED_COST.title)"
+                                                    #OPTM_PROJECTED_COST title="OPTM_PROJECTED_COST" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_MARKUP" title="MarkUp" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_MARKUP}} (change)="onSubContractChange(dataItem.rowIndex,OPTM_MARKUP.value,OPTM_MARKUP.title)"
+                                                    #OPTM_MARKUP title="OPTM_MARKUP" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_AMOUNT" title="Amount" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" disabled="true" class="form-control form-control-sm text-right"
+                                                    id="" value={{dataItem.OPTM_AMOUNT}} (change)="onSubContractChange(dataItem.rowIndex,OPTM_AMOUNT.value,OPTM_AMOUNT.title)"
+                                                    #OPTM_AMOUNT title="OPTM_AMOUNT" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="delete" title="" template="" [width]="60"
+                                        [minResizableWidth]="60">
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+                                            <button type="button" class="btn btn-danger btn-sm btn-icon" (click)="onDeleteSubContractRow(dataItem.rowIndex)">
+                                                <svg viewBox="0 0 753.23 753.23" class="icon">
+                                                    <use xlink:href="#bin"></use>
+                                                </svg>
+                                            </button>
+                                        </ng-template>
+                                    </kendo-grid-column>
+
+                                    </kendo-grid>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="tab">
+                                <button class="tablinks" (click)="openGridTab($event, 'Shipping')">Shipping</button>
+                                <!-- <button class="tablinks" (click)="openGridTab($event, 'Labour')">Labour</button> -->
+                            </div>
+                            <div id="Shipping" class="tabcontent h-100">
+
+                                <div class="d-flex" [ngStyle]="{'height':'50%', 'flex':'0 1 100%'}">
+
+                                    <kendo-grid [kendoGridBinding]="shippingGrid" [reorderable]="true" [resizable]="true"
+                                        [sortable]="false" [groupable]="false" [filterable]="false" [selectable]="selectableSettings"
+                                        [kendoGridSelectBy]="'rowIndex'" [ngStyle]="{'min-height':'200px', 'max-width':'100%'}"
+                                        [selectedKeys]="row_selection" (selectionChange)="getSelectedRowDetail($event)">
+
+                                        <ng-template kendoGridToolbarTemplate>
+
+                                            <div class="d-flex align-items-center">
+
+                                                <button [ngStyle]="{'padding':'3px 5px','min-height':'22px'}" type="button"
+                                                    title="Add Row" (click)="addshippingRow()" #button class="btn btn-sm btn-primary with-icon mr-2"><svg
+                                                        viewBox="0 0 81500 81500" class="icon">
+
+                                                        <use xlink:href="#add"></use>
+
+                                                    </svg> Add Rows
+
+                                                </button>
+
+                                            </div>
+
+                                        </ng-template>
+
+                                        <kendo-grid-column field="" title="Shipping" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_LABOR}}
+                                                    (change)="onShippingChange(dataItem.rowIndex,OPTM_LABOR.value,OPTM_LABOR.title)"
+                                                    #OPTM_LABOR title="OPTM_LABOR" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_DESCRIPTION" title="Description" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm" id="" value={{dataItem.OPTM_DESCRIPTION}}
+                                                    (change)="onShippingChange(dataItem.rowIndex,OPTM_DESCRIPTION.value,OPTM_DESCRIPTION.title)"
+                                                    #OPTM_DESCRIPTION title="OPTM_DESCRIPTION" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_QUANTITY" title="Quantity" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_QUANTITY}} (change)="onShippingChange(dataItem.rowIndex,OPTM_QUANTITY.value,OPTM_QUANTITY.title)"
+                                                    #OPTM_QUANTITY title="OPTM_QUANTITY" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_PER_UNIT_PRICE" title="Per Unit Price" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_PER_UNIT_PRICE}} (change)="onShippingChange(dataItem.rowIndex,OPTM_PER_UNIT_PRICE.value,OPTM_PER_UNIT_PRICE.title)"
+                                                    #OPTM_PER_UNIT_PRICE title="OPTM_PER_UNIT_PRICE" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_PROJECTED_COST" title="Projected Cost" filter="text"
+                                            [width]="150" [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_PROJECTED_COST}} (change)="onShippingChange(dataItem.rowIndex,OPTM_PROJECTED_COST.value,OPTM_PROJECTED_COST.title)"
+                                                    #OPTM_PROJECTED_COST title="OPTM_PROJECTED_COST" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_MARKUP" title="MarkUp" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" class="form-control form-control-sm text-right" id=""
+                                                    value={{dataItem.OPTM_MARKUP}} (change)="onShippingChange(dataItem.rowIndex,OPTM_MARKUP.value,OPTM_MARKUP.title)"
+                                                    #OPTM_MARKUP title="OPTM_MARKUP" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="OPTM_AMOUNT" title="Amount" filter="text" [width]="150"
+                                            [minResizableWidth]="150">
+
+                                            <ng-template kendoGridCellTemplate let-dataItem>
+
+                                                <input type="text" disabled="true" class="form-control form-control-sm text-right"
+                                                    id="" value={{dataItem.OPTM_AMOUNT}} (change)="onShippingChange(dataItem.rowIndex,OPTM_AMOUNT.value,OPTM_AMOUNT.title)"
+                                                    #OPTM_AMOUNT title="OPTM_AMOUNT" />
+
+                                            </ng-template>
+
+                                        </kendo-grid-column>
+
+                                        <kendo-grid-column field="delete" title="" template="" [width]="60"
+                                        [minResizableWidth]="60">
+                                        <ng-template kendoGridCellTemplate let-dataItem>
+                                            <button type="button" class="btn btn-danger btn-sm btn-icon" (click)="onDeleteShippingRow(dataItem.rowIndex)">
+                                                <svg viewBox="0 0 753.23 753.23" class="icon">
+                                                    <use xlink:href="#bin"></use>
+                                                </svg>
+                                            </button>
+                                        </ng-template>
+                                    </kendo-grid-column>
+
+                                    </kendo-grid>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 mt-5 d-flex p-0" id="left-table-section">
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header"><strong>Estimate Totals</strong></div>
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>Total Cost</span></div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center"><input class="form-control form-control-sm"
+                                                            type="text" disabled="true" [(ngModel)]="total_Cost" name="total_Cost"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>Total Price</span></div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center"><input class="form-control form-control-sm"
+                                                            type="text" disabled="true" [(ngModel)]="total_Price" name="total_Price"></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>Per Unit Cost</span></div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center"><input class="form-control form-control-sm"
+                                                            type="text" disabled="true" [(ngModel)]="per_Unit_Cost"
+                                                            name="per_Unit_Cost"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>Subtotal</span></div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center"><input class="form-control form-control-sm"
+                                                            type="text" disabled="true" [(ngModel)]="subtotal" name="subtotal"></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row justify-content-end">
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>Overhead</span></div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center"><input class="form-control form-control-sm"
+                                                            type="text" disabled="true" [(ngModel)]="overhead" name="overhead"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row justify-content-end">
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>Expedite Fee</span></div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center"><input class="form-control form-control-sm"
+                                                            type="text" (change)="onChangeExpediteFee()" [(ngModel)]="expedite_Fee"
+                                                            name="expedite_Fee"></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row justify-content-end">
+
+                                            <div class="col-md-6">
+                                                <div class="form-group row clearfix">
+                                                    <label class="col-sm-3 col-form-label">
+                                                        <div class="d-flex align-items-center"><span>Per Unit Price</span></div>
+                                                    </label>
+                                                    <div class="col-sm-9 d-inline-flex align-items-center"><input class="form-control form-control-sm"
+                                                            type="text" disabled="true" [(ngModel)]="per_Unit_Price"
+                                                            name="per_Unit_Price"></div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+                <div class="sticky-bottom-toolbar d-flex align-items-center justify-content-end border-top pt-2">
+                    <div class="mr-auto d-flex align-items-center flex-wrap">
+                        <button type="button" (click)="onSave()" class="btn btn-sm btn-success with-icon mr-2">
+                            <svg viewBox="0 0 512 512" class="icon">
+                                <use xlink:href="#saveDisk"></use>
+                            </svg>Save </button>
+                        <button type="button" (click)="resetFields()" class="btn btn-sm btn-secondary with-icon">
+                            <svg viewBox="0 0 489 489" class="icon">
+                                <use xlink:href="#cancel"></use>
+                            </svg>Reset
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<span [hidden]="showLookupLoader">
+    <app-lookup [lookupfor]='lookupfor' [serviceData]='serviceData' (lookupvalue)="getLookupValue($event) "
+        [selectedImage]="selectedImage" (lookupvalues)="getLookupValues($event)"></app-lookup>
+</span>

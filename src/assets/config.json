@@ -1,0 +1,13 @@
+[	
+	{
+		"company_name":"Optipro ERP Manufacturing",
+		"app_title":"OptiPro Estimation Tool",
+		"locale":"en",
+		"locale_name": "English",
+		"service_url":"http://172.16.6.26/OptiProERPESTIMATIONService",
+		"admin_db_name":"OPTIPROADMIN",
+		"product_code":"CNF",
+		"system_version":"1.22.00",
+		"installed" : 1
+	}
+]

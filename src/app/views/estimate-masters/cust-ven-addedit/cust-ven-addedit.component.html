@@ -1,0 +1,52 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header"><strong>{{language.custVenMaster}}</strong></div>
+        <div class="card-body">
+          <div class="form-group mb-0">
+            <div class="checkbox">
+              <label class="d-flex align-items-center justify-content-end">
+                <input id="agree" class="mr-1" type="checkbox" name="agree" [(ngModel)]="isActive" value="agree"> Is
+                {{language.active}}
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="name">{{language.businessPartner}}</label>
+                <input type="text" id="name" placeholder="" [disabled] = "isdisabled" [(ngModel)]="custVenAddeditModel.OPTM_CV_CODE"
+                  class="form-control">
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="name">{{language.name}}</label>
+                <input type="text" id="name" placeholder="" [(ngModel)]="custVenAddeditModel.OPTM_CV_NAME"
+                  class="form-control">
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="name">{{language.type}}</label>
+                <select class="form-control" [(ngModel)]="custVenAddeditModel.OPTM_CV_TYPE">
+                  <option value="">Select</option>
+                  <option value="customer">{{language.customer}}</option>
+                  <option value="sales">{{language.sales}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button type="submit" (click)="onSave()" class="btn btn-sm btn-success">
+            <i class="fa fa-dot-circle-o"></i> {{language.Save}}
+          </button>
+          <button type="reset" routerLink="{{view_route_link}}" class="btn btn-sm btn-danger">
+            <i class="fa fa-ban"></i> {{language.Cancel}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

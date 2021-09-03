@@ -1,0 +1,108 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header"><strong>{{language.contactMaster}}</strong></div>
+        <div class="card-body">
+          <div class="form-group mb-0">
+            <div class="checkbox">
+              <label class="d-flex align-items-center justify-content-end">
+                <input id="agree" class="mr-1" type="checkbox" name="agree" [(ngModel)]="isActive" value="agree"> Is
+                {{language.active}}
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="name">{{language.businessPartner}}</label>
+
+                <div class="input-group bar-box">
+                  <input class="form-control" [disabled] = "isdisabled" id="appendedInput" [(ngModel)]="contactAddeditModel.OPTM_CV_CODE"
+                    type="text">
+
+                  <div class="input-group-append" (click)="fetchCustVenlookupData()">
+                    <span class="input-group-text">
+                      <i class="fa fa-bars"></i>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="name">{{language.address1}}</label>
+                <input type="text" id="name" [(ngModel)]="contactAddeditModel.OPTM_ADDRESS1" placeholder=""
+                  class="form-control">
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="name">{{language.address2}}</label>
+                <input type="text" id="name" placeholder="" [(ngModel)]="contactAddeditModel.OPTM_ADDRESS2"
+                  class="form-control">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="name">{{language.addresstype}}</label>
+                <select class="form-control" [(ngModel)]="contactAddeditModel.OPTM_ADDTYPE">
+                  <option value="">Select</option>
+                  <option value="S">{{language.shipto}}</option>
+                  <option value="B">{{language.billto}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="name">{{language.city}}</label>
+                <input type="text" id="name" placeholder="" [(ngModel)]="contactAddeditModel.OPTM_CITY"
+                  class="form-control">
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="name">{{language.state}}</label>
+                <input type="text" id="name" placeholder="" [(ngModel)]="contactAddeditModel.OPTM_STATE"
+                  class="form-control">
+              </div>
+            </div>
+          
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="name">{{language.country}}</label>
+                <input type="text" id="name" placeholder="" [(ngModel)]="contactAddeditModel.OPTM_COUNTRY"
+                  class="form-control">
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="name">{{language.zipcode}}</label>
+                <input type="text" id="name" placeholder="" [(ngModel)]="contactAddeditModel.OPTM_ZIPCODE"
+                  class="form-control">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <button type="submit" (click)="onSave()" class="btn btn-sm btn-success">
+            <i class="fa fa-dot-circle-o"></i> {{language.Save}}
+          </button>
+          <button type="reset" routerLink="{{view_route_link}}" class="btn btn-sm btn-danger">
+            <i class="fa fa-ban"></i> {{language.Cancel}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<span *ngIf="showLookupLoader">
+  <app-lookup [lookupfor]='lookupfor' [serviceData]='serviceData' [selectedImage]="selectedImage"
+    (lookupvalue)="getLookupValue($event)" (lookupvalues)="getLookupValues($event)"></app-lookup>
+</span>

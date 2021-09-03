@@ -1,0 +1,43 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header"><strong>{{language.Markup_Category}}</strong></div>
+        <div class="card-body">
+          <div class="form-group mb-0">
+            <div class="checkbox">
+              <label class="d-flex align-items-center justify-content-end">
+                <input id="agree" class="mr-1" type="checkbox" name="agree" [(ngModel)]="isActive" value="agree"> Is
+                Active
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="name">{{language.Markup_Category_Code}}</label>
+                <input type="text" id="name" [disabled]="isMarkDisable" placeholder=""
+                  [(ngModel)]="markupAddeditModel.OPTM_MARKUP_CODE" class="form-control">
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label for="name">{{language.MarkUp_per}}</label>
+                <input type="text" id="name" placeholder="" [(ngModel)]="markupAddeditModel.OPTM_MARKUP_PERC"
+                  class="form-control">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <button type="submit" (click)="onSave()" class="btn btn-sm btn-success">
+            <i class="fa fa-dot-circle-o"></i> {{language.Save}}
+          </button>
+          <button type="reset" routerLink="{{view_route_link}}" class="btn btn-sm btn-danger">
+            <i class="fa fa-ban"></i> {{language.Cancel}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

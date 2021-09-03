@@ -1,0 +1,132 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card card-moblie-view">
+        <div class="card-header"><strong>{{language.itemMaster}}</strong></div>
+        <div class="card-body">
+          <kendo-grid [data]="gridView" [reorderable]="true" [resizable]="true" (pageChange)="pageChange($event)"
+            [selectable]="true" [skip]="skip" [sortable]="false" [filterable]="isColumnFilter" [filter]="filter"
+            [ngStyle]="{'height':'100%', 'max-width':'100%'}" [pageSize]="selectedValue" [pageable]="true"
+            (filterChange)="filterChange($event)">
+            <ng-template kendoGridToolbarTemplate>
+              <!-- <label class="custom-checkbox mb-0">
+                                                          <input #chkFilter type="checkbox" id="columnFilter"
+                                                                  [(ngModel)]="isColumnFilter"
+                                                                  (change)="saveFilterState()"
+                                                                  name="columnfilter">
+                                                          <span class="checkbox"></span>
+                                                          <span class="text-inverse">Enable Filter</span>
+                                                  </label> -->
+              <input placeholder="Search in all columns..." kendoTextBox kendoGridFocusable
+                (input)="onFilter($event.target.value)" />
+            </ng-template>
+            <kendo-grid-column media="(max-width: 767px)">
+              <ng-template kendoGridCellTemplate let-dataItem>
+
+                <dl class="opti_mobile_grid_dl">
+                  <div class="table-itm-mobile w-100 d-flex align-items-center">
+                    <dt class="d-flex align-items-center">
+                      {{language.estimationcodegroup}}</dt>
+                    <dd> {{dataItem.OPTM_PARTCODE}}
+                    </dd>
+                  </div>
+                  <div class="table-itm-mobile w-100 d-flex align-items-center">
+                    <dt>{{language.description}}</dt>
+                    <dd> {{dataItem.OPTM_DEPTDESC}}
+                    </dd>
+                  </div>
+                  <div class="table-itm-mobile w-100 d-flex align-items-center">
+                    <dt>{{language.description}}</dt>
+                    <dd> {{dataItem.OPTM_PARTDESC}}
+                    </dd>
+                  </div>
+                  <div class="table-itm-mobile w-100 d-flex align-items-center">
+                    <dt>{{language.itemcode}}</dt>
+                    <dd> {{dataItem.OPTM_ITEMCODE}}
+                    </dd>
+                  </div>
+                  <div class="table-itm-mobile w-100 d-flex align-items-center">
+                    <dt>{{language.itemgroup}}</dt>
+                    <dd> {{dataItem.OPTM_ITEMGRPCODE}}
+                    </dd>
+                  </div>
+                  <div class="table-itm-mobile w-100 d-flex align-items-center">
+                    <dt>{{language.itemtype}}</dt>
+                    <dd> {{dataItem.OPTM_ITEMTYPCODE}}
+                    </dd>
+                  </div>
+                  <div class="table-itm-mobile w-100 d-flex align-items-center">
+                    <dt>{{language.action}}</dt>
+                    <dd>
+                      <button type="button" class="btn btn-sm btn-icon mr-1 btn-primary" title=""
+                        (click)="onEdit(dataItem)">
+                        <i class="fa fa-edit"></i>
+                      </button>
+                      <button type="button" class="btn btn-sm btn-icon btn-danger" title=""
+                        (click)="onDeleteClick(dataItem)">
+                        <i class="fa fa-trash"></i>
+                      </button>
+                    </dd>
+                  </div>
+                </dl>
+
+              </ng-template>
+
+            </kendo-grid-column>
+            <kendo-grid-column field="OPTM_PARTCODE" media="(min-width: 768px)" title="{{language.estimationcodegroup}}" filter="text" [width]="50"
+              [minResizableWidth]="50" [filterable]="true">
+            </kendo-grid-column>
+            <kendo-grid-column field="OPTM_PARTDESC" media="(min-width: 768px)" title="{{language.description}}" filter="text" [width]="50"
+              [minResizableWidth]="50" [filterable]="true">
+            </kendo-grid-column>
+            <kendo-grid-column field="OPTM_ITEMCODE" media="(min-width: 768px)" title="{{language.itemcode}}" filter="text" [width]="50"
+              [minResizableWidth]="50" [filterable]="true">
+            </kendo-grid-column>
+            <kendo-grid-column field="OPTM_ITEMGRPCODE" media="(min-width: 768px)" title="{{language.itemgroup}}" filter="text" [width]="50"
+              [minResizableWidth]="50" [filterable]="true">
+            </kendo-grid-column>
+            <kendo-grid-column field="OPTM_ITEMTYPCODE" media="(min-width: 768px)" title="{{language.itemtype}}" filter="text" [width]="50"
+              [minResizableWidth]="50" [filterable]="true">
+            </kendo-grid-column>
+            <kendo-grid-column [sortable]="false" media="(min-width: 768px)" field="action" title="{{language.action}}" filter="numeric"
+              [width]="50" [minResizableWidth]="50" [filterable]="false">
+              <ng-template kendoGridCellTemplate let-dataItem>
+                <button type="button" class="btn btn-sm btn-icon mr-2 btn-primary" (click)="onEdit(dataItem)"
+                  title="{{this.language.edit}}">
+                  <i class="fa fa-edit"></i>
+                </button>
+                <button type="button" class="btn btn-sm btn-icon mr-2 btn-danger" (click)="onDeleteClick(dataItem)"
+                  title="{{this.language.delete}}">
+                  <i class="fa fa-trash"></i>
+                </button>
+
+              </ng-template>
+            </kendo-grid-column>
+
+            <ng-template kendoPagerTemplate let-totalPages="totalPages" let-currentPage="currentPage">
+              <kendo-pager-prev-buttons></kendo-pager-prev-buttons>
+              <kendo-pager-numeric-buttons [buttonCount]="5">
+              </kendo-pager-numeric-buttons>
+              <kendo-pager-next-buttons></kendo-pager-next-buttons>
+              <!-- <kendo-dropdownlist [data]="listItems" class="form-control-sm ml-3 form-control d-inline-flex w-auto"
+          (selectionChange)="getcurrentPageSize($event)" [(ngModel)]="selectedValue"></kendo-dropdownlist> -->
+              <kendo-pager-info></kendo-pager-info>
+            </ng-template>
+          </kendo-grid>
+
+
+        </div>
+        <div class="card-footer">
+          <button type="submit" routerLink="{{add_route_link}}" class="btn btn-sm btn-primary">
+            <i class="fa fa-dot-circle-o"></i> {{language.add}}
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Custom Dialog-->
+<app-custom-dialogs *ngIf="show_dialog" [dialogParams]="dialog_params" (userSelectionValue)="get_dialog_value($event)">
+</app-custom-dialogs>

@@ -1,0 +1,498 @@
+<div class="animated fadeIn dashboard-wrapper">
+  <!-- <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+         Treeview
+        </div>
+          <div class="card-body">
+            <div class="opti_overflow-auto tree-wrapper">
+              
+              <div class="tree well">
+                <div class="collaps-control d-flex justify-content-end">
+                  <button class="btn btn-sm btn-icon btn-info mr-2"
+                      type="button" (click)="expandAll()">
+                      <svg width="960" height="961" viewBox="0 0 960 961" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                        <path d="M959.997 60C959.997 26.864 933.133 0 899.997 0H599.998C566.862 0 539.998 26.864 539.998 60C539.998 93.136 566.862 120 599.998 120H754.197L557.397 317.399C546.435 328.274 539.65 343.344 539.65 359.998C539.65 376.652 546.437 391.723 557.395 402.594L557.399 402.598C568.274 413.56 583.344 420.345 599.998 420.345C616.652 420.345 631.723 413.558 642.594 402.6L839.998 205.196V359.996C839.998 393.132 866.862 419.996 899.998 419.996C933.134 419.996 959.998 393.132 959.998 359.996L959.997 60Z" fill="#fff"/>
+                        <path d="M402.598 557.4C391.723 546.438 376.653 539.653 359.999 539.653C343.345 539.653 328.274 546.44 317.403 557.398L317.399 557.402L120 754.202V600.003C120 566.867 93.136 540.003 60 540.003C26.864 540.003 0 566.867 0 600.003V900.002C0 933.138 26.864 960.002 60 960.002H359.999C393.135 960.002 419.999 933.138 419.999 900.002C419.999 866.866 393.135 840.002 359.999 840.002H205.199L402.598 642.603C413.56 631.728 420.345 616.658 420.345 600.004C420.345 583.35 413.558 568.279 402.6 557.408L402.596 557.404L402.598 557.4Z" fill="#fff"/>
+                        </svg>
+                        
+                  </button>
+                  <button class="btn btn-sm btn-icon btn-success mr-2"
+                      type="button" (click)="collapseAll()">
+                      <svg width="929" height="928" viewBox="0 0 929 928" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                        <path d="M869.802 290.056H720.255L910.956 99.355C921.489 88.822 928.002 74.273 928.002 58.201C928.002 26.054 901.945 0 869.801 0C853.729 0 839.178 6.513 828.647 17.046L637.946 207.169V58.202C637.946 26.19 611.994 0.238003 579.982 0.238003C547.97 0.238003 522.018 26.19 522.018 58.202V348.022C522.018 380.034 547.97 405.986 579.982 405.986H869.802C901.814 405.986 927.766 380.034 927.766 348.022C927.766 316.01 901.814 290.058 869.802 290.058V290.056Z" fill="#fff"/>
+                        <path d="M348.123 521.913H58.303C26.291 521.913 0.338997 547.865 0.338997 579.877C0.338997 611.889 26.291 637.841 58.303 637.841H207.27L17.147 828.542C6.557 839.048 0 853.608 0 869.696C0 885.784 6.557 900.344 17.142 910.847L17.146 910.851C27.652 921.441 42.212 927.998 58.3 927.998C74.388 927.998 88.948 921.441 99.451 910.856L290.157 720.15V869.697C290.157 901.709 316.109 927.661 348.121 927.661C380.133 927.661 406.085 901.709 406.085 869.697V579.877C406.085 547.865 380.133 521.913 348.121 521.913H348.123Z" fill="#fff"/>
+                        </svg>
+                        
+                  </button>
+                  <button class="btn btn-sm btn-icon btn-danger" (click)="toggleTree($event)"
+                      type="button" title="Close">
+                      <svg width="470" height="470" viewBox="0 0 470 470" fill="none" xmlns="http://www.w3.org/2000/svg" class="icon">
+                        <path d="M285.366 234.691L459.36 60.6977C473.255 46.8164 473.255 24.3027 459.36 10.4227C445.479 -3.47233 422.98 -3.47233 409.085 10.4227L235.09 184.416L61.0813 10.4214C47.215 -3.47359 24.6862 -3.47359 10.8062 10.4214C-3.075 24.3027 -3.075 46.8164 10.8062 60.6964L184.815 234.691L10.4212 409.085C-3.47375 422.98 -3.47375 445.48 10.4212 459.36C17.3612 466.315 26.4638 469.785 35.5663 469.785C44.6538 469.785 53.7562 466.315 60.6975 459.36L235.09 284.968L409.085 458.963C416.04 465.903 425.128 469.388 434.23 469.388C443.318 469.388 452.42 465.903 459.361 458.963C473.256 445.081 473.256 422.583 459.361 408.688L285.366 234.691Z" fill="#fff"/>
+                        </svg>
+                  </button>
+              </div>
+          <div class="custom-kendo-tree">
+              <kendo-treeview
+                [nodes]="data"
+                textField="text"
+                kendoTreeViewExpandable
+                kendoTreeViewSelectable
+                kendoTreeViewHierarchyBinding
+                childrenField="items">
+          </kendo-treeview>
+        </div>
+        </div>
+        </div>
+        </div> 
+      </div>
+    </div>
+  </div> -->
+    <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+         My Estimation Task
+        </div>
+          <div class="card-body dash-top-height">
+            <ul class="list-group list-group-hover">
+              <li class="list-group-item d-flex align-items-center" routerLink="{{estimateWorking_route_link}}"> 
+                <span class="activity-timeline"><i class="fa fa-briefcase"></i></span>
+                 NXP CHANDLER</li>
+              <li class="list-group-item d-flex align-items-center">
+              <span class="activity-timeline"><i class="fa fa-briefcase"></i></span>
+                LA LIGHT</li>
+              <li class="list-group-item d-flex align-items-center">
+                <span class="activity-timeline"><i class="fa fa-briefcase"></i></span>
+                BASTA BOATLIFT</li>
+              </ul>
+              <!-- <ul class="list-group list-group-hover">
+              <li class="list-group-item" routerLink="{{estimateWorking_route_link}}"> NXP CHANDLER</li>
+              <li class="list-group-item">LA LIGHT</li>
+              <li class="list-group-item">BASTA BOATLIFT</li>
+              </ul> -->
+        </div> 
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          Navigation
+        </div>
+        <div class="w-100 float-left">
+          <div class="card-body dash-top-height">
+            <ul class="list-group list-group-hover">
+              <li class="list-group-item d-flex align-items-center"  routerLink="{{estimationCost_rout_Link}}">
+              <span class="activity-timeline"><i class="fa fa-user"></i></span>  
+              Cost Summary</li>
+              <li class="list-group-item d-flex align-items-center"  routerLink="{{estimationCost_rout_Link}}">
+                <span class="activity-timeline"><i class="fa fa-user"></i></span>
+                Estimation Working</li>
+              <li class="list-group-item d-flex align-items-center"  routerLink="{{estimateWorking_rout_Link}}">
+              <span class="activity-timeline"><i class="fa fa-user"></i></span>  
+              Assembly Relation</li>
+              <li class="list-group-item d-flex align-items-center"  routerLink="{{departView_view_rout_Link}}">
+              <span class="activity-timeline"><i class="fa fa-user"></i></span>  
+              DepartMent Master</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header d-flex">
+          Last 5 Estimation
+          <div class="d-flex ml-auto d-md-down-none">
+            <button type="submit" class="btn btn-sm btn-primary mr-2" routerLink="{{estimationCost_rout_Link}}">
+              <i class="fa fa-dot-circle-o"></i> Add New
+               </button>
+               <button type="reset" class="btn btn-sm btn-success" routerLink="{{estimation_list_rout_Link}}">
+                 <i class="fa fa-eye"></i> View All
+                </button>
+          </div>
+        </div>
+        <div class="card-body dash-top-height p-0">
+          <ul class="todo-list ui-sortable" data-widget="todo-list">
+            <li>
+              <!-- drag handle -->
+              <span class="handle ui-sortable-handle">
+                <i class="fa fa-ellipsis-v"></i>
+                <i class="fa fa-ellipsis-v"></i>
+              </span>
+              <!-- checkbox -->
+              <div class="icheck-primary d-inline ml-1">
+                <input type="checkbox" value="" name="todo1" id="todoCheck1">
+                <label for="todoCheck1"></label>
+              </div>
+              <!-- todo text -->
+              <span class="text">Estimation Cost of Laptop</span>
+              <!-- Emphasis label -->
+              <small class="badge badge-danger">
+                <i class="fa fa-info-circle" tooltip="Estimation Cost"
+                placement="left">
+                
+
+              </i> Rejected</small>
+              <!-- General tools such as edit or delete-->
+              
+              <div class="tools">
+                <i class="fa fa-edit"></i>
+                <i class="fa fa-trash-o"></i>
+              </div>
+            </li>
+            <li class="">
+              <span class="handle ui-sortable-handle">
+                <i class="fa fa-ellipsis-v"></i>
+                <i class="fa fa-ellipsis-v"></i>
+              </span>
+              <div class="icheck-primary d-inline ml-1">
+                <input type="checkbox" value="" name="todo3" id="todoCheck3">
+                <label for="todoCheck3"></label>
+              </div>
+              <span class="text">Estimation Cost of Car</span>
+              <small class="badge badge-warning"><i class="fa fa-info-circle"></i> Under Review</small>
+              <div class="tools">
+                <i class="fa fa-edit"></i>
+                <i class="fa fa-trash-o"></i>
+              </div>
+            </li>
+             <li class="">
+              <span class="handle ui-sortable-handle">
+                <i class="fa fa-ellipsis-v"></i>
+                <i class="fa fa-ellipsis-v"></i>
+              </span>
+              <div class="icheck-primary d-inline ml-1">
+                <input type="checkbox" value="" name="todo4" id="todoCheck4">
+                <label for="todoCheck4"></label>
+              </div>
+              <span class="text">Estimation Cost of Airoplane</span>
+              <small class="badge badge-success"><i class="fa fa-info-circle"></i> Approved</small>
+              <div class="tools">
+                <i class="fa fa-edit"></i>
+                <i class="fa fa-trash-o"></i>
+              </div>
+            </li>
+            <li class="">
+              <span class="handle ui-sortable-handle">
+                <i class="fa fa-ellipsis-v"></i>
+                <i class="fa fa-ellipsis-v"></i>
+              </span>
+              <div class="icheck-primary d-inline ml-1">
+                <input type="checkbox" value="" name="todo3" id="todoCheck3">
+                <label for="todoCheck3"></label>
+              </div>
+              <span class="text">Estimation Cost of Tyers</span>
+              <small class="badge badge-warning"><i class="fa fa-info-circle"></i> Under Review</small>
+              <div class="tools">
+                <i class="fa fa-edit"></i>
+                <i class="fa fa-trash-o"></i>
+              </div>
+            </li>
+            <li class="">
+              <span class="handle ui-sortable-handle">
+                <i class="fa fa-ellipsis-v"></i>
+                <i class="fa fa-ellipsis-v"></i>
+              </span>
+              <div class="icheck-primary d-inline ml-1">
+                <input type="checkbox" value="" name="todo3" id="todoCheck3">
+                <label for="todoCheck3"></label>
+              </div>
+              <span class="text">Estimation Cost of Jewellery</span>
+              <small class="badge badge-warning"><i class="fa fa-info-circle"></i> Under Review</small>
+              <div class="tools">
+                <i class="fa fa-edit"></i>
+                <i class="fa fa-trash-o"></i>
+              </div>
+            </li>
+            <!-- <li class="">
+              <span class="handle ui-sortable-handle">
+                <i class="fa fa-ellipsis-v"></i>
+                <i class="fa fa-ellipsis-v"></i>
+              </span>
+              <div class="icheck-primary d-inline ml-1">
+                <input type="checkbox" value="" name="todo3" id="todoCheck3">
+                <label for="todoCheck3"></label>
+              </div>
+              <span class="text">Estimation Cost of Electric Scooter</span>
+              <small class="badge badge-warning"><i class="fa fa-info-circle"></i> Under Review</small>
+              <div class="tools">
+                <i class="fa fa-edit"></i>
+                <i class="fa fa-trash-o"></i>
+              </div>
+            </li> -->
+
+            
+          </ul>
+          <!-- <div class="w-100 float-left text-right p-3">
+            <button type="submit" class="btn btn-sm btn-primary">
+              <i class="fa fa-dot-circle-o"></i> Add New
+            </button>
+            <button type="submit" class="btn btn-sm btn-success">
+              <i class="fa fa-dot-circle-o"></i> View All
+            </button>
+          </div> -->
+          <div class="card-footer d-block d-sm-none">
+            <button type="submit" class="btn btn-sm btn-primary" routerLink="{{estimationCost_rout_Link}}">
+              <i class="fa fa-dot-circle-o"></i> Add New
+               </button>
+               <button type="reset" class="btn btn-sm btn-success" routerLink="{{estimation_list_rout_Link}}">
+                 <i class="fa fa-eye"></i> View All
+                </button>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+   
+  </div>
+  <!--/.row-->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+         Task Status
+        </div>
+        <div class="card-body" style="min-height: 226px;">
+          <!-- <div class="row">
+            <div class="col-sm-12">
+              <div class="progress-group mb-4">
+                <div class="progress-group-prepend">
+                  <span class="progress-group-text">
+                    Monday
+                  </span>
+                </div>
+                <div class="progress-group-bars">
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 34%" aria-valuenow="34"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 78%" aria-valuenow="78"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group mb-4">
+                <div class="progress-group-prepend">
+                  <span class="progress-group-text">
+                    Tuesday
+                  </span>
+                </div>
+                <div class="progress-group-bars">
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 56%" aria-valuenow="56"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 94%" aria-valuenow="94"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group mb-4">
+                <div class="progress-group-prepend">
+                  <span class="progress-group-text">
+                    Wednesday
+                  </span>
+                </div>
+                <div class="progress-group-bars">
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 12%" aria-valuenow="12"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 67%" aria-valuenow="67"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group mb-4">
+                <div class="progress-group-prepend">
+                  <span class="progress-group-text">
+                    Thursday
+                  </span>
+                </div>
+                <div class="progress-group-bars">
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 43%" aria-valuenow="43"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 91%" aria-valuenow="91"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group mb-4">
+                <div class="progress-group-prepend">
+                  <span class="progress-group-text">
+                    Friday
+                  </span>
+                </div>
+                <div class="progress-group-bars">
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 22%" aria-valuenow="22"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 73%" aria-valuenow="73"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group mb-4">
+                <div class="progress-group-prepend">
+                  <span class="progress-group-text">
+                    Saturday
+                  </span>
+                </div>
+                <div class="progress-group-bars">
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 53%" aria-valuenow="53"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 82%" aria-valuenow="82"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="progress-group mb-4">
+                <div class="progress-group-prepend">
+                  <span class="progress-group-text">
+                    Sunday
+                  </span>
+                </div>
+                <div class="progress-group-bars">
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: 9%" aria-valuenow="9"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <div class="progress progress-xs">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 69%" aria-valuenow="69"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+
+          </div> -->
+          <!--/.row-->
+          <div class="row">
+            <div class="col-lg-12">
+               <div class="iq-details">
+                  <span class="title text-dark">Estimation Cost of Laptop</span>
+                  <div class="percentage float-right text-primary">95 <span>%</span></div>
+                  <div class="iq-progress-bar-linear d-inline-block w-100">
+                     <div class="iq-progress-bar">
+                        <span class="bg-primary" data-percent="95" style="transition: width 2s ease 0s; width: 95%;"></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="iq-details mt-4">
+                  <span class="title text-dark">Estimation Cost of Car</span>
+                  <div class="percentage float-right text-warning">75 <span>%</span></div>
+                  <div class="iq-progress-bar-linear d-inline-block w-100">
+                     <div class="iq-progress-bar">
+                        <span class="bg-warning" data-percent="75" style="transition: width 2s ease 0s; width: 75%;"></span>
+                     </div>
+                  </div>
+               </div>
+               <div class="iq-details mt-4">
+                  <span class="title text-dark">Estimation Cost of Airoplane</span>
+                  <div class="percentage float-right text-success">55 <span>%</span></div>
+                  <div class="iq-progress-bar-linear d-inline-block w-100">
+                     <div class="iq-progress-bar">
+                        <span class="bg-success" data-percent="55" style="transition: width 2s ease 0s; width: 55%;"></span>
+                     </div>
+                  </div>
+               </div>
+               <!-- <div class="iq-details mt-4">
+                  <span class="title text-dark">Estimation Cost of Tyers</span>
+                  <div class="percentage float-right text-danger">25 <span>%</span></div>
+                  <div class="iq-progress-bar-linear d-inline-block w-100">
+                     <div class="iq-progress-bar">
+                        <span class="bg-danger" data-percent="25" style="transition: width 2s ease 0s; width: 25%;"></span>
+                     </div>
+                  </div>
+               </div> -->
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-sm-5">
+          <h4 class="card-title mb-0">Traffic</h4>
+          <div class="small text-muted">November 2017</div>
+        </div><!--/.col-->
+        <div class="col-sm-7 d-none d-md-block">
+          <button type="button" class="btn btn-primary float-right"><i class="icon-cloud-download"></i></button>
+          <div class="btn-group btn-group-toggle float-right mr-3" data-toggle="buttons">
+            <label class="btn btn-outline-secondary" [(ngModel)]="radioModel" btnRadio="Day" id="option1">Day</label>
+            <label class="btn btn-outline-secondary" [(ngModel)]="radioModel" btnRadio="Month" id="option2">Month</label>
+            <label class="btn btn-outline-secondary" [(ngModel)]="radioModel" btnRadio="Year" id="option3">Year</label>
+          </div>
+        </div><!--/.col-->
+      </div><!--/.row-->
+      <div class="chart-wrapper" style="height:300px;margin-top:40px;">
+        <canvas baseChart class="chart"
+        [datasets]="mainChartData"
+        [labels]="mainChartLabels"
+        [options]="mainChartOptions"
+        [colors]="mainChartColours"
+        [legend]="mainChartLegend"
+        [chartType]="mainChartType"></canvas>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="row text-center">
+        <div class="col-sm-12 col-md mb-sm-2 mb-0">
+          <div class="text-muted">Visits</div>
+          <strong>29.703 Users (40%)</strong>
+          <div class="progress progress-xs mt-2">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md mb-sm-2 mb-0">
+          <div class="text-muted">Unique</div>
+          <strong>24.093 Users (20%)</strong>
+          <div class="progress progress-xs mt-2">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md mb-sm-2 mb-0">
+          <div class="text-muted">Pageviews</div>
+          <strong>78.706 Views (60%)</strong>
+          <div class="progress progress-xs mt-2">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md mb-sm-2 mb-0">
+          <div class="text-muted">New Users</div>
+          <strong>22.123 Users (80%)</strong>
+          <div class="progress progress-xs mt-2">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md mb-sm-2 mb-0">
+          <div class="text-muted">Bounce Rate</div>
+          <strong>40.15%</strong>
+          <div class="progress progress-xs mt-2">
+            <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/.card-->
+
+  
+  <!--/.row-->
+</div>

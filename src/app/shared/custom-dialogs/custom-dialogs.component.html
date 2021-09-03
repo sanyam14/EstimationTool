@@ -1,0 +1,13 @@
+
+ <kendo-dialog *ngIf="dialogOpened" class="border-0  bg-transparent" (close)="closeDialoge()" [minWidth]="250" [width]="450">
+    <kendo-dialog-titlebar>
+        <div class='k-window-title'>{{popup_title}}</div>
+    </kendo-dialog-titlebar>
+    <p>{{message}}</p>
+    <kendo-dialog-actions >
+        <div class="custom-kendo-dialog-actions ml-auto">
+        <button class="mr-10 btn btn-sm btn-danger" (click)="onCancelPress()">Cancel</button>
+        <button class="mr-10 btn btn-sm btn-primary" (click)="onOKPress()" primary="true">Yes</button>
+    </div>
+    </kendo-dialog-actions>
+</kendo-dialog>
